@@ -1,0 +1,328 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+@font-face {
+  font-family: "BebasFont";
+  src: url("../fonts/Bebas-Regular.ttf") format("truetype"), url("../fonts/Bebas-Regular.svg#Bebas-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  line-height: 1;
+  color: #888;
+  font-family: "BebasFont";
+  background: #262559;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background-position: center;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+p {
+  font-family: "BebasFont";
+  line-height: 1.5;
+}
+
+/* ==================================================================
+ScrollBar
+================================================================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: 0px;
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background: #888;
+  -webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(180, 180, 180, 0.1);
+  background: #888;
+}
+
+/* ==================================================================
+ScrollBar
+================================================================== */
+.row {
+  margin-bottom: 0px;
+}
+
+.no_padding {
+  padding: 0px !important;
+}
+
+.row {
+  max-width: 800px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.logos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 35%;
+  float: left;
+  margin: 50px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+  .logos {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .logos img {
+    max-width: 50vw;
+  }
+}
+
+.typewriter h1 {
+  font-size: 26px !important;
+  color: #000;
+  float: left;
+  font-weight: 300;
+}
+
+.typewriter {
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.typewriter span {
+  min-width: 205px;
+  display: inline-block;
+}
+
+.typewriter2 h1 {
+  font-size: 30px !important;
+  font-weight: 300;
+  color: #000;
+  float: left;
+  overflow: hidden;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 0.5s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: typing 0.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #888;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #888;
+  }
+}
+
+.text {
+  float: left;
+  direction: ltr;
+}
+
+@media screen and (max-width: 800px) {
+  .text {
+    width: 100%;
+    padding: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.show2 {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .row {
+    max-width: 100%;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .typewriter h1 {
+    font-size: 4vw !important;
+    /* width: 100%; */
+    text-align: center;
+    margin-top: 0;
+  }
+  .typewriter2 h1 {
+    font-size: 20px !important;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-width: 800px) {
+  .typewriter2 h1 {
+    font-size: 4vw !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .text {
+    float: left;
+    direction: ltr;
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .firstRow {
+    display: block;
+  }
+}
+
+h2 {
+  color: #000;
+  text-align: center;
+  font-size: 27px;
+  float: left;
+  width: 100%;
+  margin-top: -30px;
+}
+
+@media screen and (max-width: 800px) {
+  h2 {
+    margin-top: -50px;
+    font-size: 4vw;
+    font-weight: 300;
+  }
+}
+
+.secondRow {
+  min-height: 100px;
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+.secondRow .typewriter {
+  float: left;
+  width: initial;
+}
+
+.secondRow .typewriter > h1:nth-child(1) {
+  padding-right: 118px;
+  position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  .secondRow .typewriter > h1:nth-child(1) {
+    font-size: 4vw !important;
+    margin-top: 0;
+    position: relative;
+    padding-right: 19vw;
+  }
+  .secondRow .typewriter > h1:nth-child(1) span {
+    top: 0px !important;
+    left: 12;
+    min-width: initial;
+  }
+}
+
+.secondRow .typewriter span {
+  position: absolute;
+  left: 21px;
+  top: 0px;
+}
+
+.centers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .centers {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

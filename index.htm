@@ -1,0 +1,137 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Papyri </title>
+  <meta name="description" content="">
+  <meta name="author" content="Papyri">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Import Main Style -->
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="files/style.css" media="screen,projection">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="8.881.0" data-gr-ext-installed="">
+
+  <div class="row">
+    <div class="firstRow">
+
+      <div class="centers">
+        <div class="text">
+          <div class="typewriter2">
+            <h1> </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="logos">
+        <img src="files/logo.png">
+      </div>
+
+    </div>
+    <div class="secondRow">
+      <div class="centers">
+        <div class="text">
+
+          <div class="typewriter">
+            <h1>The
+              <span class="txt-rotate" data-period="500" data-rotate="[ &quot; &ensp; Easiest&quot;, &quot; &ensp;Fastest&quot;, &quot; &ensp;Cheapest &quot; ]"><span class="wrap">La</span></span>
+
+
+            </h1>
+            <h1>
+            &emsp; Way To Review Contracts
+            </h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>
+
+    </h2>
+  </div>
+
+
+
+<script src="files/jquery.js"></script>
+<script src="files/materialize.js"></script>
+
+<script>
+  setTimeout(function () {
+    $(".logos ").fadeIn(2000);
+  }, 1500);
+  setTimeout(function () {
+    $(".centers ").removeClass("show2");
+  }, 3000);
+
+
+  var TxtRotate = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 1000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+
+  TxtRotate.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+    var that = this;
+    var delta = 300 - Math.random() * 100;
+
+    if (this.isDeleting) {
+      delta /= 2;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  };
+
+  window.onload = function () {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i = 0; i < elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right:0em solid #000 }";
+    document.body.appendChild(css);
+  };
+</script>
+
+<div class="hiddendiv common"></div><style type="text/css">.txt-rotate > .wrap { border-right:0em solid #000 }</style></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
